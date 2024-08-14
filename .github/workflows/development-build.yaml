@@ -27,7 +27,7 @@ jobs:
         run: yarn install
 
       - name: 🚀 Build app
-        run: eas build --non-interactive --platform android --profile development --local --output ${{ github.workspace }}/app-dev.apk
+        run: eas build --non-interactive --platform android --profile development --local --freeze-credentials --output ${{ github.workspace }}/app-dev.apk
       
       - name: 📦 Upload artifact
         uses: actions/upload-artifact@v2
